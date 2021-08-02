@@ -1,5 +1,5 @@
 # Basketball Winning Probability
-Calculate feature weights such as 2 Point percentage, steals and others to determine win probability
+Calculate feature weights such as 2 Point percentage, steals and others to determine win probability. It uses the [sklearn linear regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ridge_regression.html?highlight=ridge#sklearn.linear_model.ridge_regression) to estimate the feature weights.
 
 ## Data
 The data file is in data folder. There are team records after 3 games or preliminary stage.

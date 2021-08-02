@@ -2,7 +2,8 @@
 Calculate feature weights such as 2 Point percentage, steals and others to determine win probability
 
 ## Data
-The data file is in data folder.
+The data file is in data folder. There are team records after 3 games or preliminary stage.
+
 #### Tokyo Mens' Basketball Olympics.
 ```
         CAT            NAME             OPP        P2        P3        FT         AS         RE         TO         BL         ST    RES

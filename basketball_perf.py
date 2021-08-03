@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.3.0'
+__version__ = '0.4.0'
 
 
 import pandas as pd
@@ -94,7 +94,7 @@ def main():
     avedata_winprob = []
 
     # Calculate ranking before quarter-finals based on teams' average stats.
-    names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina']
+    names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
     for name in names:
         namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
         features = namedf[['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']]

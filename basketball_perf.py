@@ -4,9 +4,11 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.8.1'
+__version__ = '0.9.0'
 __author__ = 'fsmosca'
 
+
+import sys
 
 import pandas as pd
 import sklearn.linear_model
@@ -23,13 +25,23 @@ def win_probability(modelcoef, modelintercept, features):
     return np.sum(np.multiply(modelcoef, features.to_numpy())) + modelintercept
 
 
-def main():   
+def main(argv):
+    # Check input data file.
+    if len(argv) == 0:
+        print('usage:')
+        print('python basketball_perf.py <data filename>')
+        print('python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats.csv')
+        raise Exception('Missing data file!')
+
     # (1) Prepare data
-    csvfn = './data/tokyo2021_olympics_basketball_team_stats.csv'
+    csvfn = argv[0]
     df = pd.read_csv(csvfn)
 
     # Print all data
     # print(df.to_string())
+
+    # Print data summary
+    # print(df.describe().to_string())
 
     # Plot win probability vs 2 point percentage.
     ax = df.plot.scatter(x='RES', y='P2', alpha=0.5, title='2 Point Percentage on Win Probability')
@@ -78,7 +90,7 @@ def main():
         mse = sklearn.metrics.mean_squared_error(y_test, y_pred)        
         mae = sklearn.metrics.mean_absolute_error(y_test, y_pred)
         r2_score = sklearn.metrics.r2_score(y_test, y_pred)
-        
+
         print(f'model {cnt+1}: {k}')  
         print('=======================\n')
         
@@ -98,7 +110,7 @@ def main():
         cnt += 1
         print()
 
-        print('Model win probability ranking based on team average stats after preliminaries but before quarter-finals.')
+        print('Model win probability ranking based on team single and average statistics.')
         avedata_name = []
         avedata_winprob = []
 
@@ -121,7 +133,7 @@ def main():
         avedf = pd.DataFrame(tdict)
         avedf = avedf.sort_values(by=['winprob'], ascending=False).reset_index(drop=True)
 
-        print('Win Probability Ranking Summary before quarter-finals')
+        print('Win Probability Ranking Summary')
         print(avedf)
         print()
 
@@ -144,4 +156,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])

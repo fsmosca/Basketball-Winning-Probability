@@ -12,7 +12,7 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
 ## Data
 The data file is in data folder. There are team records after 3 games each team in the preliminary stage.
 
-#### Tokyo Mens' Basketball Olympics 2020/2021.
+#### Tokyo Olympics 2020/2021 Basketball Men
 ```
         CAT            NAME             OPP        P2        P3        FT         AS         RE         TO         BL         ST    RES
 0    Single       Argentina        Slovenia  0.620000  0.160000  0.840000  20.000000  32.000000  10.000000   2.000000  12.000000  0.000

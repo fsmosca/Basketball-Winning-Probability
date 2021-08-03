@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.8.0'
+__version__ = '0.8.1'
 __author__ = 'fsmosca'
 
 
@@ -67,8 +67,6 @@ def main():
         random_state=None)})
     
     # (3) Fit data
-    modelcoef = None
-    modelintercept = None
     cnt = 0
 
     for k, model in models.items():

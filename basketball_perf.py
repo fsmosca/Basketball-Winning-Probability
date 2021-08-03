@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 __author__ = 'fsmosca'
 
 
@@ -38,8 +38,9 @@ def main():
     ax.figure.savefig('p2-winprob.pdf')
 
     # Selected features for multiple linear regression
+    reg_features = ['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']
     # P2=2-Point %, P3=3-Point %, FT=Free Throw %, AS=assists, Re=Rebound, TO=Turnovers, ST=Steals
-    X = df[['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']]
+    X = df[reg_features]
     # print(X)
 
     # Our target or objective value
@@ -80,18 +81,13 @@ def main():
         print(f'r2_score: {r2_score}\n')
 
         print('Regression Model Feature Weights:')
-        print(f'P2_we: {model.coef_[0]*100:0.3f}%')
-        print(f'P3_we: {model.coef_[1]*100:0.3f}%')
-        print(f'FT_we: {model.coef_[2]*100:0.3f}%')
-        print(f'AS_we: {model.coef_[3]*100:0.3f}%')
-        print(f'RE_we: {model.coef_[4]*100:0.3f}%')
-        print(f'TO_we: {model.coef_[5]*100:0.3f}%')
-        print(f'ST_we: {model.coef_[6]*100:0.3f}%')
+        for i, f in enumerate(reg_features):
+            print(f'{f}_we: {model.coef_[i]*100:0.3f}%')
+        print(f'intercept: {model.intercept_}')
         
         cnt += 1
         modelcoef = np.array(model.coef_)
         modelintercept = model.intercept_
-        print(f'intercept: {modelintercept}')
         print()
 
     print(f'Formula:')
@@ -106,7 +102,7 @@ def main():
     names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
     for name in names:
         namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
-        features = namedf[['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']]
+        features = namedf[reg_features]
         winprob = win_probability(modelcoef, modelintercept, features)
         avedata_name.append(name)
         avedata_winprob.append(max(0.001, min(1.0, winprob)))

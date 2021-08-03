@@ -112,7 +112,7 @@ st = 5
 winprob = 1.178*0.6133 + 0.333*0.3566 + 0.445*0.71 + 0.016*23 + 0.014*55 - 0.0027*12 + 0.0085*5 - 1.46
 ```
 
-#### Summary of win probability before the quarter-finals.
+#### Summary of win probability before the quarter-final
 ```
         team   winprob
 0   Slovenia  0.850260
@@ -151,7 +151,7 @@ ST_we: 0.92%
 intercept: -1.695916059067152
 ```
 
-#### Ranking Summary before semi-final
+#### Summary of win probability before the semi-final
 ```
 Win Probability Ranking Summary
         team   winprob

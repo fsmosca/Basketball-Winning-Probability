@@ -31,7 +31,7 @@ X = df[['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']]
 y = df['RES']
 ```
 
-#### Legend:
+#### Legend
 ```
 P2       : 2 Points percentage
 P3       : 3 Points percentage
@@ -41,6 +41,34 @@ RE       : num rebounds
 TO       : num turnovers
 ST       : num steals
 ```
+
+#### Plot
+Scatter plot from all data points in the the data file.
+You need to install matplot plot lib with the command `pip install matplotlib`.
+
+##### (1) 2 point percentage plot, higher percentage has higher winning probability.
+```python
+    # Plot win probability vs 2 point percentage.
+    ax = df.plot.scatter(x='RES', y='P2', alpha=0.5, title='2 Point Percentage on Win Probability')
+    ax.set_xlabel("Win Probability")
+    ax.set_ylabel("2 Point Percentage")
+    ax.figure.savefig('p2-winprob.pdf')
+```
+    
+![winprob-p2](https://user-images.githubusercontent.com/22366935/127969585-ba456933-fb65-4dc9-b994-d1a0082c2b3c.png)
+
+***
+
+##### (2) Turnover plot, higher turnovers has lower winning probability.
+```python
+    ax = df.plot.scatter(x='RES', y='TO', alpha=0.5, title='Turnovers on Win Probability')
+    ax.set_xlabel("Win Probability")
+    ax.set_ylabel("Turnovers")
+    ax.figure.savefig('to-winprob.pdf')
+```
+
+![turnover](https://user-images.githubusercontent.com/22366935/127970286-c67ba9ba-41e2-4e1c-809c-a5c8ed43b1ca.png)
+
 
 ## Regression Weights
 ```

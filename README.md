@@ -65,17 +65,19 @@ winprob = P2_we*p2 + P3_we*p3 + FT_we*ft + AS_we*as + RE_we*re + TO_we*to + ST_w
 #### Model win probability ranking based on team average stats after preliminaries but before quarter-finals.
 Slovenia team average in 3 games on the features:
 ```
-slovenia_ave = [0.613333333,0.356666667,0.71,23,54.66666667,12,4.666666667]
+slovenia_ave = [0.613333333,0.356666667,0.71,23,55,12,5]
 
 The 0.613333333 is the average of 2 Points percentage after 3 games in the preliminary.
 p3 = 0.356666667
 ft = 0.71
-...
-st = 4.666666667
+as = 23
+re = 55
+to = 12
+st = 5
 ```
 
 ```
-winprob = 0.48346*0.6133 + 0.11258*0.3566 + 0.12833*0.71 + 0.01974*23 + 0.02727*54.67 - 0.01586*12 + 0.01979*4.67 - 1.2158
+winprob = 0.56*0.6133 + 0.12*0.3566 + 0.23*0.71 + 0.027*23 + 0.03*55 - 0.007*12 + 0.02*5 - 1.73
 ```
 
 #### Summary of win probability before the quarter-finals.

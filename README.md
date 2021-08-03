@@ -7,7 +7,11 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
   * pip install -r requirements.txt
 * Download the repo [here](https://github.com/fsmosca/Basketball-Winning-Probability/archive/refs/heads/main.zip)
 * Command line  
-  `python basketball_perf.py`
+  * Generate ranking after group phase but before quarter-final.  
+  `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats.csv`
+  
+  * Generate ranking after quarter-final but before semi-final.  
+  `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_2.csv`
   
 ## Data
 The data file `tokyo2021_olympics_basketball_team_stats.csv` is in data folder. There are team records after 3 games each team in the preliminary stage.
@@ -126,7 +130,39 @@ winprob = 1.178*0.6133 + 0.333*0.3566 + 0.445*0.71 + 0.016*23 + 0.014*55 - 0.002
 match: Slovenia - Germany, score: 94 - 70
 match: Spain - USA, score: 81 - 95
 match: Italy - France, score: 75 - 84
-match: Australia - Argentina, score: ? - ?
+match: Australia - Argentina, score: 97 - 59
+```
+
+## Ranking after Quarter-Final
+The regression uses the data file `tokyo2021_olympics_basketball_team_stats_2.csv`.
+
+#### Command line
+`python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_2.csv`
+
+#### Regression Feature Weights
+```
+P2_we: 118.30%
+P3_we: 61.65%
+FT_we: 38.76%
+AS_we: 2.05%
+RE_we: 1.48%
+TO_we: -0.10%
+ST_we: 0.92%
+intercept: -1.695916059067152
+```
+
+#### Ranking Summary before semi-final
+```
+Win Probability Ranking Summary
+        team   winprob
+0   Slovenia  0.833057
+1        USA  0.737728
+2  Australia  0.688941
+3     France  0.682080
+4      Spain  0.412434
+5  Argentina  0.390209
+6      Italy  0.383580
+7    Germany  0.375616
 ```
 
 ## Credits

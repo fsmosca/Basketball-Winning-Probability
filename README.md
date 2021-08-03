@@ -5,9 +5,12 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
 * Install python
 * Install requirements  
   * pip install -r requirements.txt
+* Download the repo [here](https://github.com/fsmosca/Basketball-Winning-Probability/archive/refs/heads/main.zip)
+* Command line  
+  `python basketball_perf.py`
   
 ## Data
-The data file is in data folder. There are team records after 3 games or preliminary stage.
+The data file is in data folder. There are team records after 3 games each team in the preliminary stage.
 
 #### Tokyo Mens' Basketball Olympics 2020/2021.
 ```

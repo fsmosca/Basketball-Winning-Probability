@@ -45,14 +45,14 @@ ST       : num steals
 ## Regression Weights
 ```
 Regression Model Feature Weights Results:
-P2_we: 48.346%
-P3_we: 11.258%
-FT_we: 12.833%
-AS_we: 1.974%
-RE_we: 2.727%
-TO_we: -1.586%
-ST_we: 1.979%
-intercept: -1.2158539121219145
+P2_we: 55.978%
+P3_we: 12.094%
+FT_we: 23.039%
+AS_we: 2.703%
+RE_we: 2.936%
+TO_we: -0.725%
+ST_we: 2.284%
+intercept: -1.7308056325819758
 ```
 
 ## Formula

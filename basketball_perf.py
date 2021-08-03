@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.2.0'
+__version__ = '0.3.0'
 
 
 import pandas as pd
@@ -15,6 +15,10 @@ import numpy as np
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
+
+
+def win_probability(modelcoef, modelintercept, features):
+    return np.sum(np.multiply(modelcoef, features.to_numpy())) + modelintercept
 
 
 def main():   
@@ -89,37 +93,19 @@ def main():
     avedata_name = []
     avedata_winprob = []
 
-    # Teams average preliminary stats:
-    # The 0.613333333 is the average of 2 Points percentage after 3 games in the preliminary.
-    slovenia_ave = np.array([0.613333333,0.356666667,0.71,23,55,12,5])
-    winprob = np.sum(np.multiply(modelcoef, slovenia_ave)) + modelintercept
-    avedata_name.append('Slovenia')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
+    # Calculate ranking before quarter-finals based on teams' average stats.
+    names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina']
+    for name in names:
+        namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
+        features = namedf[['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']]
+        winprob = win_probability(modelcoef, modelintercept, features)
+        avedata_name.append(name)
+        avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    france_ave = np.array([0.597,0.377,0.777,23,40,15,8])
-    winprob = np.sum(np.multiply(modelcoef, france_ave)) + modelintercept
-    avedata_name.append('France')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
-
-    australia_ave = np.array([0.510,0.387,0.860,23,39,13,10])
-    winprob = np.sum(np.multiply(modelcoef, australia_ave)) + modelintercept
-    avedata_name.append('Australia')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
-
-    usa_ave = np.array([0.61,0.426666667,0.816666667,27,37,9,9])
-    winprob = np.sum(np.multiply(modelcoef, usa_ave)) + modelintercept
-    avedata_name.append('USA')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
-
-    italy_ave = np.array([0.543,0.353,0.830,17,35,9,7])
-    winprob = np.sum(np.multiply(modelcoef, italy_ave)) + modelintercept
-    avedata_name.append('Italy')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
-
-    germany_ave = np.array([0.523,0.420,0.847,16,38,17,5])
-    winprob = np.sum(np.multiply(modelcoef, germany_ave)) + modelintercept
-    avedata_name.append('Germany')
-    avedata_winprob.append(max(0.001, min(1.0, winprob)))
+        print(f'{name} average features and winprob:')
+        print(features.to_string(index=False))
+        print(f'winprob: {winprob}')
+        print()
 
     tdict = {'team': avedata_name, 'winprob': avedata_winprob}
 

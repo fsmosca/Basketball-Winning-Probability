@@ -114,6 +114,7 @@ winprob = 1.178*0.6133 + 0.333*0.3566 + 0.445*0.71 + 0.016*23 + 0.014*55 - 0.002
 
 #### Summary of win probability before the quarter-final
 ```
+Win Probability Ranking Summary
         team   winprob
 0   Slovenia  0.850260
 1        USA  0.769014

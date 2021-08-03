@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.6.0'
+__version__ = '0.7.0'
 __author__ = 'fsmosca'
 
 
@@ -53,9 +53,18 @@ def main():
         X, y, test_size=0.20, random_state=1)
     
     # (2) Define model to use
-    # Ridge - https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ridge_regression.html?highlight=ridge#sklearn.linear_model.ridge_regression
+    # Ridge - https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge
     models = dict()
-    models.update({'Ridge': sklearn.linear_model.Ridge()})
+    normalize = True  # False, default
+    models.update({'Ridge': sklearn.linear_model.Ridge(
+        alpha=1.0,
+        fit_intercept=True,
+        normalize=normalize,
+        copy_X=True,
+        max_iter=None,
+        tol=0.001,
+        solver='auto',
+        random_state=None)})
     
     # (3) Fit data
     modelcoef = None
@@ -82,7 +91,7 @@ def main():
 
         print('Regression Model Feature Weights:')
         for i, f in enumerate(reg_features):
-            print(f'{f}_we: {model.coef_[i]*100:0.3f}%')
+            print(f'{f}_we: {model.coef_[i]*100:0.2f}%')
         print(f'intercept: {model.intercept_}')
         
         cnt += 1
@@ -105,7 +114,7 @@ def main():
         features = namedf[reg_features]
         winprob = win_probability(modelcoef, modelintercept, features)
         avedata_name.append(name)
-        avedata_winprob.append(max(0.001, min(1.0, winprob)))
+        avedata_winprob.append(winprob)
 
         print(f'{name} average features and winprob:')
         print(features.to_string(index=False))

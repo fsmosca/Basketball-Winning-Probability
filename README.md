@@ -40,11 +40,11 @@ AS       : num assists
 RE       : num rebounds
 TO       : num turnovers
 ST       : num steals
+RES      : game result can be 0 or 1
 ```
 
 #### Plot
-Scatter plot from all data points in the the data file.
-You need to install matplot plot lib with the command `pip install matplotlib`.
+Scatter plot from all data points in the the data file. You need to install matplotlib with the command `pip install matplotlib`.
 
 ##### (1) 2 point percentage plot, higher percentage has higher winning probability.
 ```python

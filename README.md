@@ -73,14 +73,14 @@ You need to install matplot plot lib with the command `pip install matplotlib`.
 ## Regression Weights
 ```
 Regression Model Feature Weights Results:
-P2_we: 55.978%
-P3_we: 12.094%
-FT_we: 23.039%
-AS_we: 2.703%
-RE_we: 2.936%
-TO_we: -0.725%
-ST_we: 2.284%
-intercept: -1.7308056325819758
+P2_we: 117.82%
+P3_we: 33.31%
+FT_we: 44.52%
+AS_we: 1.59%
+RE_we: 1.41%
+TO_we: -0.27%
+ST_we: 0.85%
+intercept: -1.4574659532047058
 ```
 
 ## Formula
@@ -105,20 +105,20 @@ st = 5
 ```
 
 ```
-winprob = 0.56*0.6133 + 0.12*0.3566 + 0.23*0.71 + 0.027*23 + 0.03*55 - 0.007*12 + 0.02*5 - 1.73
+winprob = 1.178*0.6133 + 0.333*0.3566 + 0.445*0.71 + 0.016*23 + 0.014*55 - 0.0027*12 + 0.0085*5 - 1.46
 ```
 
 #### Summary of win probability before the quarter-finals.
 ```
         team   winprob
-0   Slovenia  1.000000
-1        USA  0.806730
-2  Australia  0.700358
-3     France  0.697910
-4  Argentina  0.549768
-5      Spain  0.408472
-6      Italy  0.388679
-7    Germany  0.346867
+0   Slovenia  0.850260
+1        USA  0.769014
+2     France  0.673783
+3  Australia  0.619803
+4  Argentina  0.533384
+5      Spain  0.486418
+6      Italy  0.467634
+7    Germany  0.462015
 ```
 
 ## Tokyo Olympics 2020/2021 Basketball Quarter-final results

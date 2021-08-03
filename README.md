@@ -166,5 +166,11 @@ Win Probability Ranking Summary
 7    Germany  0.375616
 ```
 
+#### Tokyo Olympics 2020/2021 Basketball Semi-final results
+```
+match: USA - Australia, score: ? - ?
+match: France - Slovenia, score: ? - ?
+```
+
 ## Credits
 * [FIBA Olympics](http://www.fiba.basketball/olympics/men/2020)

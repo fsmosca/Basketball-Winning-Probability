@@ -10,7 +10,7 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
   `python basketball_perf.py`
   
 ## Data
-The data file is in data folder. There are team records after 3 games each team in the preliminary stage.
+The data file `tokyo2021_olympics_basketball_team_stats.csv` is in data folder. There are team records after 3 games each team in the preliminary stage.
 
 #### Tokyo Olympics 2020/2021 Basketball Men
 ```

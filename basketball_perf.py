@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 import pandas as pd
@@ -91,32 +91,32 @@ def main():
 
     # Teams average preliminary stats:
     # The 0.613333333 is the average of 2 Points percentage after 3 games in the preliminary.
-    slovenia_ave = np.array([0.613333333,0.356666667,0.71,23,54.66666667,12,4.666666667])
+    slovenia_ave = np.array([0.613333333,0.356666667,0.71,23,55,12,5])
     winprob = np.sum(np.multiply(modelcoef, slovenia_ave)) + modelintercept
     avedata_name.append('Slovenia')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    france_ave = np.array([0.596666667,0.376666667,0.776666667,23,39.66666667,15,7.666666667])
+    france_ave = np.array([0.597,0.377,0.777,23,40,15,8])
     winprob = np.sum(np.multiply(modelcoef, france_ave)) + modelintercept
     avedata_name.append('France')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    australia_ave = np.array([0.51,0.386666667,0.86,23,38.66666667,12.66666667,9.666666667])
+    australia_ave = np.array([0.510,0.387,0.860,23,39,13,10])
     winprob = np.sum(np.multiply(modelcoef, australia_ave)) + modelintercept
     avedata_name.append('Australia')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    usa_ave = np.array([0.61,0.426666667,0.816666667,27,37,9.333333333,8.666666667])
+    usa_ave = np.array([0.61,0.426666667,0.816666667,27,37,9,9])
     winprob = np.sum(np.multiply(modelcoef, usa_ave)) + modelintercept
     avedata_name.append('USA')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    italy_ave = np.array([0.4075,0.265,0.6225,13,26.25,6.75,5.5])
+    italy_ave = np.array([0.543,0.353,0.830,17,35,9,7])
     winprob = np.sum(np.multiply(modelcoef, italy_ave)) + modelintercept
     avedata_name.append('Italy')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))
 
-    germany_ave = np.array([0.523333333,0.42,0.846666667,16,38,17.33333333,5])
+    germany_ave = np.array([0.523,0.420,0.847,16,38,17,5])
     winprob = np.sum(np.multiply(modelcoef, germany_ave)) + modelintercept
     avedata_name.append('Germany')
     avedata_winprob.append(max(0.001, min(1.0, winprob)))

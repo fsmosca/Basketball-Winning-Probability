@@ -88,7 +88,7 @@ winprob = 0.48346*0.6133 + 0.11258*0.3566 + 0.12833*0.71 + 0.01974*23 + 0.02727*
 
 ## Tokyo Olympics 2020/2021 Basketball Quarter-final results
 ```
-match: Slovenia - Autralia, score: 94-70
+match: Slovenia - Germany, score: 94-70
 match: Spain - USA, score: ?-?
 match: Italy - France, score: ?-?
 match: Australia - Argentina, score: ?-?

@@ -125,7 +125,7 @@ winprob = 0.56*0.6133 + 0.12*0.3566 + 0.23*0.71 + 0.027*23 + 0.03*55 - 0.007*12 
 ```
 match: Slovenia - Germany, score: 94 - 70
 match: Spain - USA, score: 81 - 95
-match: Italy - France, score: ? - ?
+match: Italy - France, score: 75 - 84
 match: Australia - Argentina, score: ? - ?
 ```
 

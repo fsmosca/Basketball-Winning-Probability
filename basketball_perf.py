@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.7.0'
+__version__ = '0.8.0'
 __author__ = 'fsmosca'
 
 
@@ -89,45 +89,48 @@ def main():
         print(f'mae: {mae}') 
         print(f'r2_score: {r2_score}\n')
 
+        modelcoef = model.coef_
+        modelintercept = model.intercept_
+
         print('Regression Model Feature Weights:')
         for i, f in enumerate(reg_features):
-            print(f'{f}_we: {model.coef_[i]*100:0.2f}%')
-        print(f'intercept: {model.intercept_}')
+            print(f'{f}_we: {modelcoef[i]*100:0.2f}%')
+        print(f'intercept: {modelintercept}')
         
         cnt += 1
-        modelcoef = np.array(model.coef_)
-        modelintercept = model.intercept_
+        print()
+
+        print('Model win probability ranking based on team average stats after preliminaries but before quarter-finals.')
+        avedata_name = []
+        avedata_winprob = []
+
+        # Calculate ranking before quarter-finals based on teams' average stats.
+        names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
+        for name in names:
+            namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
+            features = namedf[reg_features]
+            winprob = win_probability(modelcoef, modelintercept, features)
+            avedata_name.append(name)
+            avedata_winprob.append(winprob)
+
+            print(f'{name} average features and winprob:')
+            print(features.to_string(index=False))
+            print(f'winprob: {winprob}')
+            print()
+
+        tdict = {'team': avedata_name, 'winprob': avedata_winprob}
+
+        avedf = pd.DataFrame(tdict)
+        avedf = avedf.sort_values(by=['winprob'], ascending=False).reset_index(drop=True)
+
+        print('Win Probability Ranking Summary before quarter-finals')
+        print(avedf)
         print()
 
     print(f'Formula:')
     print(f'winprob = P2_we*p2 + P3_we*p3 + FT_we*ft + AS_we*as + RE_we*re + TO_we*to + ST_we*st + intercept')
     print()
 
-    print('Model win probability ranking based on team average stats after preliminaries but before quarter-finals.')
-    avedata_name = []
-    avedata_winprob = []
-
-    # Calculate ranking before quarter-finals based on teams' average stats.
-    names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
-    for name in names:
-        namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
-        features = namedf[reg_features]
-        winprob = win_probability(modelcoef, modelintercept, features)
-        avedata_name.append(name)
-        avedata_winprob.append(winprob)
-
-        print(f'{name} average features and winprob:')
-        print(features.to_string(index=False))
-        print(f'winprob: {winprob}')
-        print()
-
-    tdict = {'team': avedata_name, 'winprob': avedata_winprob}
-
-    avedf = pd.DataFrame(tdict)
-    avedf = avedf.sort_values(by=['winprob'], ascending=False).reset_index(drop=True)
-    print(avedf)
-
-    print()
     print('References:')
     print('mse      : mean squared error')
     print('mae      : mean absolute error')

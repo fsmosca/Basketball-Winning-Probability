@@ -4,7 +4,8 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.4.0'
+__version__ = '0.5.0'
+__author__ = 'fsmosca'
 
 
 import pandas as pd
@@ -12,6 +13,7 @@ import sklearn.linear_model
 import sklearn.metrics
 from sklearn.model_selection import train_test_split
 import numpy as np
+import matplotlib.pyplot
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -26,7 +28,14 @@ def main():
     csvfn = './data/tokyo2021_olympics_basketball_team_stats.csv'
     df = pd.read_csv(csvfn)
 
-    print(df.to_string())
+    # Print all data
+    # print(df.to_string())
+
+    # Plot win probability vs 2 point percentage.
+    ax = df.plot.scatter(x='RES', y='P2', alpha=0.5, title='2 Point Percentage on Win Probability')
+    ax.set_xlabel("Win Probability")
+    ax.set_ylabel("2 Point Percentage")
+    ax.figure.savefig('p2-winprob.pdf')
 
     # Selected features for multiple linear regression
     # P2=2-Point %, P3=3-Point %, FT=Free Throw %, AS=assists, Re=Rebound, TO=Turnovers, ST=Steals

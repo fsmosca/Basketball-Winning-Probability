@@ -80,13 +80,12 @@ winprob = 0.48346*0.6133 + 0.11258*0.3566 + 0.12833*0.71 + 0.01974*23 + 0.02727*
 
 #### Summary of win probability before the quarter-finals.
 ```
-        team   winprob
 0   Slovenia  1.000000
-1        USA  0.797254
-2  Australia  0.683377
-3     France  0.664142
-4    Germany  0.369150
-5      Italy  0.065056
+1        USA  0.806730
+2  Australia  0.700358
+3     France  0.697910
+4      Italy  0.388679
+5    Germany  0.346867
 ```
 
 ## Tokyo Olympics 2020/2021 Basketball Quarter-final results

@@ -1,57 +1,57 @@
-﻿PHASE,CAT,NAME,OPP,P2,P3,FT,AS,RE,TO,BL,ST,RES
-Group,Single,Argentina,Slovenia,0.62,0.16,0.84,20,32,10,2,12,0.00
-Group,Single,Slovenia,Argentina,0.63,0.37,0.67,17,59,19,4,3,1.00
-Group,Single,Slovenia,Japan,0.68,0.38,0.68,27,54,7,4,5,1.00
-Group,Single,Japan,Slovenia,0.44,0.39,0.56,15,33,9,5,5,0.00
-Group,Single,Spain,Slovenia,0.39,0.36,0.81,24,41,8,1,7,0.00
-Group,Single,Slovenia,Spain,0.53,0.32,0.78,25,51,10,2,6,1.00
-Group,Single,Argentina,Japan,0.51,0.39,0.92,27,48,11,3,8,1.00
-Group,Single,Japan,Argentina,0.52,0.32,1.00,16,39,13,4,3,0.00
-Group,Single,Spain,Argentina,0.65,0.38,0.73,17,30,20,3,10,1.00
-Group,Single,Argentina,Spain,0.52,0.33,0.64,13,35,24,0,8,0.00
-Group,Single,Australia,Nigeria,0.36,0.46,0.90,21,44,21,1,12,1.00
-Group,Single,Nigeria,Australia,0.46,0.29,0.50,16,38,24,7,14,0.00
-Group,Single,Italy,Australia,0.61,0.32,0.90,16,30,7,3,3,0.00
-Group,Single,Australia,Italy,0.54,0.36,0.79,26,44,11,4,4,1.00
-Group,Single,Australia,Germany,0.63,0.34,0.89,22,28,6,1,13,1.00
-Group,Single,Germany,Australia,0.50,0.33,0.93,14,45,18,2,3,0.00
-Group,Single,Iran,Czech Republic,0.58,0.32,0.59,20,33,21,1,9,0.00
-Group,Single,Czech Republic,Iran,0.61,0.20,0.67,29,43,15,2,12,1.00
-Group,Single,Czech Republic,France,0.56,0.47,0.44,24,26,17,3,11,0.00
-Group,Single,France,Czech Republic,0.66,0.43,0.80,27,35,15,0,9,1.00
-Group,Single,USA,Czech Republic,0.81,0.48,0.75,24,36,10,5,8,1.00
-Group,Single,Czech Republic,USA,0.52,0.44,0.62,17,29,15,1,6,0.00
-Group,Single,Iran,France,0.35,0.33,0.74,17,32,15,4,8,0.00
-Group,Single,France,Iran,0.53,0.40,0.82,24,42,16,2,9,1.00
-Group,Single,France,USA,0.60,0.30,0.71,18,42,14,0,5,1.00
-Group,Single,USA,France,0.40,0.31,0.76,23,36,12,4,8,0.00
-Group,Single,Germany,Italy,0.47,0.47,0.78,15,34,14,2,6,0.00
-Group,Single,Italy,Germany,0.51,0.48,0.75,20,35,9,4,11,1.00
-Group,Single,Nigeria,Germany,0.55,0.47,0.58,22,28,18,5,12,0.00
-Group,Single,Germany,Nigeria,0.60,0.46,0.83,19,35,20,0,6,1.00
-Group,Single,USA,Iran,0.62,0.49,0.94,34,39,6,10,10,1.00
-Group,Single,Iran,USA,0.39,0.35,0.54,17,39,23,1,3,0.00
-Group,Single,Italy,Nigeria,0.51,0.26,0.84,16,40,11,3,8,1.00
-Group,Single,Nigeria,Italy,0.41,0.39,0.67,11,39,19,2,7,0.00
-Group,Single,Japan,Spain,0.40,0.41,0.78,20,32,11,3,7,0.00
-Group,Single,Spain,Japan,0.67,0.29,0.73,20,32,11,3,5,1.00
-Quarter,Single,Slovenia,Germany,0.68,0.43,0.85,19,40,16,0,12,1.00
-Quarter,Single,Germany,Slovenia,0.48,0.32,0.77,15,28,14,1,10,0.00
-Quarter,Single,Spain,USA,0.54,0.30,0.80,12,42,17,7,3,0.00
-Quarter,Single,USA,Spain,0.54,0.41,0.71,28,32,9,1,14,1.00
-Quarter,Single,Italy,France,0.43,0.21,0.86,15,33,9,2,12,0.00
-Quarter,Single,France,Italy,0.56,0.32,0.81,22,49,20,5,7,1.00
-Quarter,Single,Australia,Argentina,0.54,0.45,0.71,33,44,12,2,11,1.00
-Quarter,Single,Argentina,Australia,0.40,0.27,0.83,13,36,17,0,5,0.00
-Group+Quarter,Average,Argentina,AllOpp,0.51,0.29,0.81,18,38,16,1,8,0.25
-Group+Quarter,Average,Australia,AllOpp,0.52,0.40,0.82,26,40,13,2,10,1.00
-Group,Average,Czech Republic,AllOpp,0.56,0.37,0.58,23,33,16,2,10,0.33
-Group+Quarter,Average,France,AllOpp,0.59,0.36,0.79,23,42,16,2,8,1.00
-Group+Quarter,Average,Germany,AllOpp,0.51,0.40,0.83,16,36,17,1,6,0.25
-Group,Average,Iran,AllOpp,0.44,0.33,0.62,18,35,20,2,7,0.00
-Group+Quarter,Average,Italy,AllOpp,0.52,0.32,0.84,17,35,9,3,9,0.50
-Group,Average,Japan,AllOpp,0.45,0.37,0.78,17,35,11,4,5,0.00
-Group,Average,Nigeria,AllOpp,0.47,0.38,0.58,16,35,20,5,11,0.00
-Group+Quarter,Average,Spain,AllOpp,0.56,0.33,0.77,18,36,14,4,6,0.50
-Group+Quarter,Average,Slovenia,AllOpp,0.63,0.38,0.75,22,51,13,3,7,1.00
-Group+Quarter,Average,USA,AllOpp,0.59,0.42,0.79,27,36,9,5,10,0.75
+PHASE,CAT,NAME,OPP,PTS,FGM,FGA,FG%,2PM,2PA,2P%,3PM,3PA,3P%,FTM,FTA,FT%,OREB,DREB,REB,AST,FO,TO,STL,BLK,+/-,EFF,RES
+Group,Single,Iran,Czech Republic,78,31,62,0.5,25,43,0.58,6,19,0.32,10,17,0.59,7,26,33,20,18,21,9,1,-6,79,0
+Group,Single,Czech Republic,Iran,84,33,74,0.45,27,44,0.61,6,30,0.2,12,18,0.67,16,27,43,29,17,15,12,2,6,105,1
+Group,Single,Germany,Italy,82,30,64,0.47,15,32,0.47,15,32,0.47,7,9,0.78,9,25,34,15,16,14,6,2,-10,84,0
+Group,Single,Italy,Germany,92,34,68,0.5,19,37,0.51,15,31,0.48,9,12,0.75,9,26,35,20,15,9,11,4,10,112,1
+Group,Single,Australia,Nigeria,84,28,71,0.39,17,47,0.36,11,24,0.46,17,19,0.9,13,31,44,21,20,21,12,1,17,90,1
+Group,Single,Nigeria,Australia,67,24,61,0.39,17,37,0.46,7,24,0.29,12,24,0.5,9,29,38,16,22,24,14,7,-17,67,0
+Group,Single,France,USA,83,29,62,0.47,21,35,0.6,8,27,0.3,17,24,0.71,9,33,42,18,21,14,5,0,7,90,1
+Group,Single,USA,France,76,25,69,0.36,15,37,0.41,10,32,0.31,16,21,0.76,11,25,36,23,25,12,8,4,-7,82,0
+Group,Single,Argentina,Slovenia,100,37,83,0.45,32,52,0.61,5,31,0.16,21,25,0.84,7,25,32,20,27,10,12,2,-18,103,0
+Group,Single,Slovenia,Argentina,118,42,84,0.5,26,41,0.63,16,43,0.37,18,27,0.67,18,41,59,17,29,19,3,4,18,128,1
+Group,Single,Japan,Spain,77,26,64,0.41,15,37,0.41,11,27,0.41,14,18,0.78,8,24,32,20,16,11,7,3,-11,79,0
+Group,Single,Spain,Japan,88,36,70,0.51,28,42,0.67,8,28,0.29,8,11,0.73,10,32,42,20,21,11,5,3,11,110,1
+Group,Single,Nigeria,Germany,92,34,67,0.51,17,31,0.55,17,36,0.47,7,12,0.58,5,23,28,22,26,18,12,5,-7,101,0
+Group,Single,Germany,Nigeria,99,34,63,0.54,22,37,0.59,12,26,0.46,19,23,0.83,8,27,35,19,16,20,6,0,7,102,1
+Group,Single,USA,Iran,120,42,76,0.55,23,37,0.62,19,39,0.49,17,18,0.94,7,32,39,34,16,6,10,10,54,168,1
+Group,Single,Iran,USA,66,25,67,0.37,16,41,0.39,9,26,0.35,7,13,0.54,12,27,39,17,15,23,3,1,-54,56,0
+Group,Single,Italy,Australia,83,33,66,0.5,25,41,0.61,8,25,0.32,9,10,0.9,6,24,30,16,18,7,3,3,-3,92,0
+Group,Single,Australia,Italy,86,32,70,0.46,21,39,0.54,11,31,0.35,11,14,0.79,16,28,44,26,18,11,4,4,3,109,1
+Group,Single,Czech Republic,France,77,31,58,0.53,23,41,0.56,8,17,0.47,7,16,0.44,7,19,26,24,11,17,11,3,-20,87,0
+Group,Single,France,Czech Republic,97,38,68,0.56,25,38,0.66,13,30,0.43,8,10,0.8,11,24,35,27,19,15,9,0,20,119,1
+Group,Single,Slovenia,Japan,116,43,80,0.54,28,41,0.68,15,39,0.39,15,22,0.68,17,37,54,27,17,7,5,4,35,148,1
+Group,Single,Japan,Slovenia,81,32,77,0.42,20,46,0.43,12,31,0.39,5,9,0.56,9,24,33,15,21,9,5,5,-35,77,0
+Group,Single,Spain,Argentina,81,30,57,0.53,20,31,0.65,10,26,0.39,11,15,0.73,3,27,30,17,21,20,10,3,10,88,1
+Group,Single,Argentina,Spain,71,26,61,0.43,16,31,0.52,10,30,0.33,9,14,0.64,12,23,35,13,24,24,8,0,-10,61,0
+Group,Single,Iran,France,62,21,61,0.34,15,43,0.35,6,18,0.33,14,19,0.74,7,24,31,17,15,15,8,4,-17,60,0
+Group,Single,France,Iran,79,31,63,0.49,23,43,0.54,8,20,0.4,9,11,0.82,8,34,42,24,20,16,9,2,17,103,1
+Group,Single,Italy,Nigeria,80,28,70,0.4,20,39,0.51,8,31,0.26,16,19,0.84,13,27,40,16,19,11,8,3,9,86,1
+Group,Single,Nigeria,Italy,71,25,62,0.4,14,34,0.41,11,28,0.39,10,15,0.67,8,31,39,11,22,19,7,2,-9,67,0
+Group,Single,Australia,Germany,89,35,70,0.5,24,38,0.63,11,32,0.34,8,9,0.89,9,19,28,22,16,6,13,1,13,106,1
+Group,Single,Germany,Australia,76,26,63,0.41,15,30,0.5,11,33,0.33,13,14,0.93,18,27,45,14,17,18,3,2,-13,80,0
+Group,Single,USA,Czech Republic,119,45,73,0.62,25,31,0.81,20,42,0.48,9,12,0.75,7,29,36,24,17,10,8,5,35,149,1
+Group,Single,Czech Republic,USA,84,34,68,0.5,26,50,0.52,8,18,0.44,8,13,0.61,8,21,29,17,14,15,6,1,-35,83,0
+Group,Single,Argentina,Japan,97,36,79,0.46,22,43,0.51,14,36,0.39,11,12,0.92,15,33,48,27,14,11,8,3,20,122,1
+Group,Single,Japan,Argentina,77,33,78,0.42,27,52,0.52,6,26,0.23,5,5,1,11,28,39,16,13,13,3,4,-20,78,0
+Group,Single,Spain,Slovenia,87,29,77,0.38,13,33,0.39,16,44,0.36,13,16,0.81,10,31,41,24,24,8,7,1,-8,96,0
+Group,Single,Slovenia,Spain,95,31,74,0.42,19,36,0.53,12,38,0.32,21,27,0.78,15,36,51,25,19,10,6,2,8,116,1
+quarter,Single,Slovenia,Germany,94,34,63,0.54,19,28,0.68,15,35,0.43,11,13,0.85,9,31,40,19,20,16,12,0,24,115,1
+quarter,Single,Germany,Slovenia,70,24,63,0.38,12,25,0.48,12,38,0.32,10,13,0.77,8,20,28,15,20,14,10,1,-24,66,0
+quarter,Single,Spain,USA,81,29,64,0.45,22,41,0.54,7,23,0.3,16,20,0.8,12,30,42,12,16,17,3,7,-14,89,0
+quarter,Single,USA,Spain,95,36,75,0.48,23,43,0.54,13,32,0.41,10,14,0.71,9,23,32,28,20,9,14,1,14,117,1
+quarter,Single,Italy,France,75,22,68,0.32,15,35,0.43,7,33,0.21,24,28,0.86,12,21,33,15,20,9,12,2,-9,77,0
+quarter,Single,France,Italy,84,30,63,0.48,23,41,0.56,7,22,0.32,17,21,0.81,14,35,49,22,23,20,7,5,9,106,1
+quarter,Single,Australia,Argentina,97,35,71,0.49,18,33,0.55,17,38,0.45,10,14,0.71,13,31,44,33,13,12,11,2,38,130,1
+quarter,Single,Argentina,Australia,59,23,68,0.34,15,38,0.4,8,30,0.27,5,6,0.83,12,24,36,13,19,17,5,0,-38,49,0
+Group+Quarter,Average,Argentina,AllOpp,82,31,73,0.42,21,41,0.51,9,32,0.288,12,14,0.808,12,26,38,18,21,16,8,1,-12,84,0.25
+Group+Quarter,Average,Australia,AllOpp,89,33,71,0.46,20,39,0.52,13,31,0.4,12,14,0.823,13,27,40,26,17,13,10,2,18,109,1
+Group,Average,Czech Republic,AllOpp,82,33,67,0.493,25,45,0.563,7,22,0.37,9,16,0.573,10,22,33,23,14,16,10,2,-16,92,0.333
+Group+Quarter,Average,France,AllOpp,86,32,64,0.5,23,39,0.59,9,25,0.363,13,17,0.785,11,32,42,23,21,16,8,2,13,105,1
+Group+Quarter,Average,Germany,AllOpp,82,29,63,0.45,16,31,0.51,13,32,0.395,12,15,0.828,11,25,36,16,17,17,6,1,-10,83,0.25
+Group,Average,Iran,AllOpp,69,26,63,0.403,19,42,0.44,7,21,0.333,10,16,0.623,9,26,34,18,16,20,7,2,-26,65,0
+Group+Quarter,Average,Italy,AllOpp,83,29,68,0.43,20,38,0.515,10,30,0.318,15,17,0.838,10,25,35,17,18,9,9,3,2,92,0.5
+Group,Average,Japan,AllOpp,78,30,73,0.417,21,45,0.453,10,28,0.343,8,11,0.78,9,25,35,17,17,11,5,4,-22,78,0
+Group,Average,Nigeria,AllOpp,77,28,63,0.433,16,34,0.473,12,29,0.383,10,17,0.583,7,28,35,16,23,20,11,5,-11,78,0
+Group+Quarter,Average,Spain,AllOpp,84,31,67,0.468,21,37,0.563,10,30,0.335,12,16,0.768,9,30,39,18,21,14,6,4,0,96,0.5
+Group+Quarter,Average,Slovenia,AllOpp,106,38,75,0.5,23,37,0.63,15,39,0.378,16,22,0.745,15,36,51,22,21,13,7,3,21,127,1
+Group+Quarter,Average,USA,AllOpp,103,37,73,0.503,22,37,0.595,16,36,0.423,13,16,0.79,9,27,36,27,20,9,10,5,24,129,0.75

@@ -113,7 +113,8 @@ def main(argv):
         avedata_name = []
         avedata_winprob = []
 
-        # Calculate ranking before quarter-finals based on teams' average stats.
+        # Calculate ranking before quarter-finals based on teams' average stats using tokyo2021_olympics_basketball_team_stats.csv.
+        # Calculate ranking before semi-finals based on teams' average stats using tokyo2021_olympics_basketball_team_stats_2.csv.
         names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
         for name in names:
             namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]

@@ -4,7 +4,7 @@ Basketball winning probability calculation based on team statistics.
 """
 
 
-__version__ = '0.9.0'
+__version__ = '0.10.0'
 __author__ = 'fsmosca'
 
 
@@ -44,14 +44,13 @@ def main(argv):
     # print(df.describe().to_string())
 
     # Plot win probability vs 2 point percentage.
-    ax = df.plot.scatter(x='RES', y='P2', alpha=0.5, title='2 Point Percentage on Win Probability')
+    ax = df.plot.scatter(x='RES', y='2P%', alpha=0.5, title='2 Point Percentage on Win Probability')
     ax.set_xlabel("Win Probability")
     ax.set_ylabel("2 Point Percentage")
-    ax.figure.savefig('p2-winprob.pdf')
+    ax.figure.savefig('2p-winprob.pdf')
 
     # Selected features for multiple linear regression
-    reg_features = ['P2', 'P3', 'FT', 'AS', 'RE', 'TO', 'ST']
-    # P2=2-Point %, P3=3-Point %, FT=Free Throw %, AS=assists, Re=Rebound, TO=Turnovers, ST=Steals
+    reg_features = ['2P%', '3P%', 'FT%', 'AST', 'OREB', 'DREB', 'TO', 'STL']
     X = df[reg_features]
     # print(X)
 
@@ -138,21 +137,23 @@ def main(argv):
         print()
 
     print(f'Formula:')
-    print(f'winprob = P2_we*p2 + P3_we*p3 + FT_we*ft + AS_we*as + RE_we*re + TO_we*to + ST_we*st + intercept')
+    print(f'winprob = 2P%_we*2p + 3P%_we*3p + FT%_we*ft + AST_we*ast + REB_we*reb + TO_we*to + STL_we*stl + intercept')
     print()
 
     print('References:')
     print('mse      : mean squared error')
     print('mae      : mean absolute error')
     print('r2_score : coefficient of determination')
-    print('P2       : 2 Points percentage')
-    print('P3       : 3 Points percentage')
-    print('FT       : Free Throw percentage')
-    print('AS       : num assists')
-    print('RE       : num rebounds')
-    print('TO       : num turnovers')
-    print('ST       : num steals')
-    print('P2_we    : 2 Point percentage weight')
+    print('2PM       : 2 Points Made')
+    print('2PA       : 2 Points Attempt')
+    print('2P%       : 2 Points percentage')
+    print('3P%       : 3 Points percentage')
+    print('FT%       : Free Throw percentage')
+    print('AST       : num assists')
+    print('REB       : num rebounds')
+    print('TO        : num turnovers')
+    print('STL       : num steals')
+    print('2P%_we    : 2 Point percentage weight')
 
 
 if __name__ == '__main__':

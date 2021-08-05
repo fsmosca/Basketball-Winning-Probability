@@ -1,3 +1,18 @@
+"""
+FIBA teams stats data crawler.
+
+Requirements:
+    Python 3
+    Selenium:
+        pip install selenium
+    Chrome driver
+"""
+
+
+__version__ = '0.1.0'
+__author__ = 'fsmosca'
+
+
 import sys
 import time
 from pathlib import Path

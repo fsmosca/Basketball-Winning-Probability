@@ -13,6 +13,9 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
   * Generate ranking after quarter-final but before semi-final.  
   `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_2.csv`
   
+  * Generate ranking after semi-final but before final.  
+  `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_3.csv`
+  
 ## Data
 The data file `tokyo2021_olympics_basketball_team_stats.csv` is in data folder. There are team records after 3 games each team in the preliminary stage.
 
@@ -30,6 +33,11 @@ The data file `tokyo2021_olympics_basketball_team_stats.csv` is in data folder. 
 #### Features considered in multiple linear regression.
 ```python
 X = df[['2P%', '3P%', 'FT%', 'AST', 'OREB', 'DREB', 'TO', 'STL']]
+```
+
+You can change the features to include the Fouls and EFF using
+```python
+X = df[['2P%', '3P%', 'FT%', 'AST', 'OREB', 'DREB', 'TO', 'STL', 'FO', 'EFF']]
 ```
 
 #### Target is the result.

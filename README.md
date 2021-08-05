@@ -78,9 +78,8 @@ Scatter plot from all data points in the the data file. You need to install matp
 ![turnover](https://user-images.githubusercontent.com/22366935/127970286-c67ba9ba-41e2-4e1c-809c-a5c8ed43b1ca.png)
 
 
-## Regression Weights
+## Regression feature weights after group phase but before quarter-final
 ```
-Regression Model Feature Weights Results:
 2P%_we: 109.95%
 3P%_we: 54.63%
 FT%_we: 55.01%
@@ -146,7 +145,7 @@ The regression uses the data file `tokyo2021_olympics_basketball_team_stats_2.cs
 #### Command line
 `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_2.csv`
 
-#### Regression Feature Weights Results
+#### Regression feature weights after quarter-final but before semi-final
 ```
 2P%_we: 108.01%
 3P%_we: 56.97%

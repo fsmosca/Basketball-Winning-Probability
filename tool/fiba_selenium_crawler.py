@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
+# Modify location of your driver.
 DRIVER_PATH = './chromedriver_win32/chromedriver.exe'
 options = Options()
 # options.add_argument('--headless')
@@ -102,6 +103,7 @@ def main(argv):
     driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
     driver.implicitly_wait(2)  # seconds
 
+    # Links to get team stats in the group phase.
     gphase = ['http://www.fiba.basketball/olympics/men/2020/game/2507/Iran-Czech-Republic',
               'http://www.fiba.basketball/olympics/men/2020/game/2507/Germany-Italy',
               'http://www.fiba.basketball/olympics/men/2020/game/2507/Australia-Nigeria',
@@ -122,12 +124,14 @@ def main(argv):
               'http://www.fiba.basketball/olympics/men/2020/game/0108/Spain-Slovenia'
     ]
 
+    # Links to get team stats in the quarter-final.
     qphase = ['https://www.fiba.basketball/olympics/men/2020/game/0308/Slovenia-Germany',
               'https://www.fiba.basketball/olympics/men/2020/game/0308/Spain-USA',
               'http://www.fiba.basketball/olympics/men/2020/game/0308/Italy-France',
               'http://www.fiba.basketball/olympics/men/2020/game/0308/Australia-Argentina'
     ]
 
+    # Links to get team stats in the semi-final.
     sfphase = ['http://www.fiba.basketball/olympics/men/2020/game/0508/USA-Australia',
               'http://www.fiba.basketball/olympics/men/2020/game/0508/France-Slovenia'
               ]

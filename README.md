@@ -178,5 +178,48 @@ match: USA - Australia, score: 97 - 78
 match: France - Slovenia, score: 90 - 89
 ```
 
+## Ranking after Semi-Final
+The regression uses the data file `tokyo2021_olympics_basketball_team_stats_3.csv`.
+
+#### Command line
+`python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_3.csv`
+
+#### Regression feature weights after semi-final but before final
+```
+2P%_we: 99.18%
+3P%_we: 73.70%
+FT%_we: 64.72%
+AST_we: 1.29%
+OREB_we: 1.56%
+DREB_we: 2.08%
+TO_we: -0.29%
+STL_we: 1.32%
+intercept: -1.8408441099337223
+
+```
+
+#### Summary of win probability before the final
+```
+Win Probability Ranking Summary
+        team   winprob
+0   Slovenia  0.781881
+1        USA  0.745022
+2     France  0.670351
+3  Australia  0.609665
+4      Spain  0.495007
+5      Italy  0.433284
+6    Germany  0.418237
+7  Argentina  0.417896
+```
+
+#### Tokyo Olympics 2020/2021 Basketball final results
+```
+Gold/Silver:
+match: France - USA, score: ? - ?
+
+Bronze:
+match: Slovenia - USA, score: ? - ?
+```
+
 ## Credits
 * [FIBA Olympics](http://www.fiba.basketball/olympics/men/2020)

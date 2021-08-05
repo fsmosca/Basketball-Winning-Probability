@@ -175,8 +175,8 @@ Win Probability Ranking Summary
 
 #### Tokyo Olympics 2020/2021 Basketball Semi-final results
 ```
-match: USA - Australia, score: ? - ?
-match: France - Slovenia, score: ? - ?
+match: USA - Australia, score: 97 - 78
+match: France - Slovenia, score: 90 - 89
 ```
 
 ## Credits

@@ -16,6 +16,9 @@ Calculate feature weights such as 2 Point percentage, steals and others to deter
   * Generate ranking after semi-final but before final.  
   `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_3.csv`
   
+  * Generate ranking after the final.  
+  `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_4.csv`
+  
 ## Data
 There is a selenium python script crawler that can be found under tool folder, that can get data from FIBA. It saves data to csv file similar to files in data folder but without average records.
 

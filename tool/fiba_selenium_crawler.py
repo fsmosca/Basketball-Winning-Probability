@@ -1,11 +1,16 @@
 """
 FIBA teams stats data crawler.
 
+It will only save the data from matches to csv file, but not the team stats average. You need to
+edit the file (with excel or other editor) and add team average so that win probability can be generated
+by basketball_perf.py script.
+
 Requirements:
-    Python 3
-    Selenium:
+    1. Install Python 3.
+    2. Install Selenium.
         pip install selenium
-    Chrome driver
+    3. Download Chrome driver at https://chromedriver.chromium.org/downloads.
+    4. Modify the DRIVER_PATH below if needed.
 """
 
 
@@ -29,7 +34,7 @@ options.add_argument('--disable-gpu')
 # options.add_argument('--window-size=1920,1080')
 
 
-def get_page_title(driver):
+def get_team_name(driver):
     """
     Example title:
     Slovenia v Germany boxscore - Tokyo 2020 Men's Olympic Basketball Tournament - 3 August - FIBA.basketball
@@ -66,7 +71,7 @@ def get_data(driver, url, urla, urlb, phase='group', category='single'):
     driver.get(url)
 
     # Get team names
-    teams = get_page_title(driver)
+    teams = get_team_name(driver)
     teama = teams[0]
     teamb = teams[1]
     print(f'teama: {teama}')
@@ -114,7 +119,7 @@ def get_data(driver, url, urla, urlb, phase='group', category='single'):
         w.write(f'{resb}\n')
 
 
-def main(argv):
+def main():
     driver = webdriver.Chrome(options=options, executable_path=DRIVER_PATH)
     driver.implicitly_wait(2)  # seconds
 
@@ -151,6 +156,10 @@ def main(argv):
               'http://www.fiba.basketball/olympics/men/2020/game/0508/France-Slovenia'
               ]
 
+    finalphase = ['http://www.fiba.basketball/olympics/men/2020/game/0708/France-USA',
+               'http://www.fiba.basketball/olympics/men/2020/game/0708/Slovenia-Australia'
+               ]
+
     # xpaths to get team summary stats
     urla = '//*[@id="gamepage_boxscore"]/div[2]/div/section[1]/div/table/tfoot/tr[2]'
     urlb = '//*[@id="gamepage_boxscore"]/div[2]/div/section[2]/div/table/tfoot/tr[2]'
@@ -159,21 +168,26 @@ def main(argv):
     # category can be single or average.
     for url in urls:
         time.sleep(5)
-        get_data(driver, url, urla, urlb, phase='group', category='single')
+        get_data(driver, url, urla, urlb, phase='Group', category='single')
 
     urls = qphase
     for url in urls:
         time.sleep(5)
-        get_data(driver, url, urla, urlb, phase='quarter', category='single')
+        get_data(driver, url, urla, urlb, phase='Quarter', category='single')
 
     urls = sfphase
     for url in urls:
         time.sleep(5)
-        get_data(driver, url, urla, urlb, phase='semi', category='single')
+        get_data(driver, url, urla, urlb, phase='Semi', category='single')
+
+    urls = finalphase
+    for url in urls:
+        time.sleep(5)
+        get_data(driver, url, urla, urlb, phase='Final', category='single')
 
     driver.quit()
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()
 

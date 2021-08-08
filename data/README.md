@@ -10,3 +10,7 @@
   
 * tokyo2021_olympics_basketball_team_stats_3.csv  
   Add new data from semi-final results. This will rank teams for final matches.
+  
+* tokyo2021_olympics_basketball_team_stats_4.csv  
+  Add new data from final results.
+

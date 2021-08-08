@@ -236,6 +236,9 @@ match: Slovenia - Australia, score: 93 - 107
 #### Command line
 `python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_4.csv`
 
+#### Regression model
+The script uses sklearn.linear_model.Ridge model.
+
 #### Features
 `reg_features = ['2P%', '3P%', 'FT%', 'OREB', 'DREB', 'AST', 'FO', 'TO', 'STL', 'BLK']`
 

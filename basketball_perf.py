@@ -50,7 +50,7 @@ def main(argv):
     ax.figure.savefig('2p-winprob.pdf')
 
     # Selected features for multiple linear regression
-    reg_features = ['2P%', '3P%', 'FT%', 'AST', 'OREB', 'DREB', 'TO', 'STL']
+    reg_features = ['2P%', '3P%', 'FT%', 'OREB', 'DREB', 'AST', 'FO', 'TO', 'STL', 'BLK']
     X = df[reg_features]
     # print(X)
 
@@ -115,7 +115,8 @@ def main(argv):
 
         # Calculate ranking before quarter-finals based on teams' average stats using tokyo2021_olympics_basketball_team_stats.csv.
         # Calculate ranking before semi-finals based on teams' average stats using tokyo2021_olympics_basketball_team_stats_2.csv.
-        names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain']
+        names = ['Slovenia', 'France', 'Australia', 'USA', 'Italy', 'Argentina', 'Germany', 'Spain',
+                 'Japan', 'Iran', 'Nigeria', 'Czech Republic']
         for name in names:
             namedf = df.loc[(df['CAT'] == 'Average') & (df['NAME'] == name)]
             features = namedf[reg_features]
@@ -123,10 +124,10 @@ def main(argv):
             avedata_name.append(name)
             avedata_winprob.append(winprob)
 
-            print(f'{name} average features and winprob:')
-            print(features.to_string(index=False))
-            print(f'winprob: {winprob}')
-            print()
+            # print(f'{name} average features and winprob:')
+            # print(features.to_string(index=False))
+            # print(f'winprob: {winprob}')
+            # print()
 
         tdict = {'team': avedata_name, 'winprob': avedata_winprob}
 

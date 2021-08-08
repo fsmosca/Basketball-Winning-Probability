@@ -225,10 +225,51 @@ Win Probability Ranking Summary
 #### Tokyo Olympics 2020/2021 Basketball final results
 ```
 Gold/Silver:
-match: France - USA, score: ? - ?
+match: France - USA, score: 82 - 87
 
 Bronze:
-match: Slovenia - USA, score: ? - ?
+match: Slovenia - Australia, score: 93 - 107
+```
+
+## Ranking after Final
+
+#### Command line
+`python basketball_perf.py ./data/tokyo2021_olympics_basketball_team_stats_4.csv`
+
+#### Features
+`reg_features = ['2P%', '3P%', 'FT%', 'OREB', 'DREB', 'AST', 'FO', 'TO', 'STL', 'BLK']`
+
+#### Regression Model Feature Weight Results
+```
+2P%_we: 105.94%
+3P%_we: 75.38%
+FT%_we: 50.95%
+OREB_we: 1.56%
+DREB_we: 1.93%
+AST_we: 1.16%
+FO_we: -0.06%
+TO_we: -0.57%
+STL_we: 1.49%
+BLK_we: 0.54%
+intercept: -1.6896029023867132
+```
+
+#### Win Probability Ranking Summary
+This ranking is based on average stats per team applying the feature weight results.
+```
+              team   winprob
+0         Slovenia  0.764157
+1              USA  0.696443
+2           France  0.630511
+3        Australia  0.618170
+4            Spain  0.496014
+5            Italy  0.445323
+6        Argentina  0.396582
+7          Germany  0.396354
+8   Czech Republic  0.384329
+9          Nigeria  0.293762
+10           Japan  0.288418
+11            Iran  0.186147
 ```
 
 ## Credits
